@@ -1,17 +1,10 @@
-//Solution goes in Sources
 
 class Nucleotide {
 
     /// MARK: - Properties
 
-
     /// The given DNA strand
-    var strand: String
-
-    /// Constants used in various methods
-    struct Constants {
-        let allowableStrands = ["A", "C", "G", "T", "U"]
-    }
+    let strand: String
 
     /// MARK: - Functions
     func complementOfDNA() throws -> String {
@@ -32,7 +25,7 @@ class Nucleotide {
         case "G":
             return "C"
         default:
-            throw RnaTranscription.TranscriptionError.invalidNucleotide("\(strand) is not a valid Nucleotide")
+            throw TranscriptionError.invalidNucleotide("\(strand) is not a valid Nucleotide")
         }
     }
 
@@ -40,12 +33,9 @@ class Nucleotide {
     init(_ strand: String) {
         self.strand = strand
     }
-
 }
 
 /// MARK: - Error Handling
-struct RnaTranscription {
-    enum TranscriptionError: Error {
-        case invalidNucleotide(String)
-    }
+enum TranscriptionError: Error {
+    case invalidNucleotide(String)
 }
