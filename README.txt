@@ -12,12 +12,12 @@ Completed January 2019
 9. list-ops
 10. nucleotide-count
 11. raindrops
-12. rna-transcription
-13. robot-name
-14. scrabble-score
-15. strain
-16. triangle
-17. two-fer
+12. robot-name
+13. scrabble-score
+14. strain
+15. triangle
+16. two-fer
 
 Completed June 2019
 1. ETL
+2. rna-transcription
