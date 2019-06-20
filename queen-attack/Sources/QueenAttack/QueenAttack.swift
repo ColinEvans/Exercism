@@ -1,6 +1,5 @@
 //Solution goes in Sources
 
-
 /// some stuff about queens
 class Queens {
     
@@ -14,24 +13,27 @@ class Queens {
     var white: [Int]
     var black: [Int]
     
-    
-    /// Error Types
-    static let InitError: QueensErrors = QueensErrors.InitError
-    
     /// Returns a `String` of the current `board` state
     var description: String {
-        return board.joined().joined(separator: "\n")
+        let oneDimensionBoard = board.joined(separator: ["\n"]) // TODO separates after every character, not string
+        return oneDimensionBoard.reduce("", { x, y in
+            x + " " + y
+        })
     }
     
     
     private var board: [[String]] = {
-        let row = Array.init(repeating: "-", count: 8)
+        let row = Array.init(repeating: "_", count: 8)
         return Array.init(repeating: row, count: 8)
     }()
     
     /// MARK: Lifecycle Functions
     init(white: [Int], black: [Int]) throws {
-        if (white == black) { throw Queens.InitError }
+
+        if (white == black) { throw InitError.sameSpace }
+        if (white.count != 2 || black.count != 2) { throw InitError.incorrectNumberOfCoordinates }
+        if (white.filter { $0 > 7 || $0 < 0 }.count > 0 || black.filter { $0 > 7 || $0 < 0 }.count > 0) { throw InitError.invalidCoordinates }
+
         self.white = white
         self.black = black
         board[white[0]][white[1]] = "W"
@@ -51,12 +53,24 @@ class Queens {
         board[blackDefault.0][blackDefault.1] = "B"
     }
     
+    var canAttack: Bool {
+        // Check the same row
+        if (black[0] == white[0]) { return true }
+        
+        // Check the same column
+        if (black[1] == white[1]) { return true }
+        
+        // Check Diag
+        return false
+    }
+    
 }
 
 /// MARK: Extensions <Error>
 extension Queens {
-    
-    enum QueensErrors: Error {
-        case InitError
+    enum InitError: Error {
+        case incorrectNumberOfCoordinates
+        case invalidCoordinates
+        case sameSpace
     }
 }
