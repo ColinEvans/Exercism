@@ -22,4 +22,4 @@ Completed June 2019
 1. ETL
 2. rna-transcription
 3. kindergarten-garden
-4. wip: queenAttack
+4. queenAttack
