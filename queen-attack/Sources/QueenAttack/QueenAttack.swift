@@ -14,11 +14,22 @@ class Queens {
     var black: [Int]
     
     /// Returns a `String` of the current `board` state
+    /// TODO: Can this be done functionally??
     var description: String {
-        let oneDimensionBoard = board.joined(separator: ["\n"]) // TODO separates after every character, not string
-        return oneDimensionBoard.reduce("", { x, y in
-            x + " " + y
-        })
+        var mutatedStr = ""
+        for string in board {
+            for (index, char) in string.enumerated() {
+                if index == string.count - 1 {
+                    mutatedStr.append(char)
+                    mutatedStr.append("\n")
+                } else {
+                    mutatedStr.append(char)
+                    mutatedStr.append(" ")
+                }
+            }
+        }
+        mutatedStr.removeLast()
+        return mutatedStr
     }
     
     
@@ -60,7 +71,9 @@ class Queens {
         // Check the same column
         if (black[1] == white[1]) { return true }
         
-        // Check Diag
+        // Check diag
+        if (black[1] != white[1] && black[0] != white[0]) { return true }
+ 
         return false
     }
     
