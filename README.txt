@@ -1,5 +1,10 @@
 Exercism Completed Questions
 
+Completed December 2023:
+Grains
+Bob
+Space Age
+
 Completed January 2019
 1. Accumulate
 2. Clock
