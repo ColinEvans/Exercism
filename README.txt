@@ -1,6 +1,8 @@
 Exercism Completed Questions
 
 Completed December 2023:
+Allergies
+Acronym
 Grains
 Bob
 Space Age

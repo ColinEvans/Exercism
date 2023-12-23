@@ -1,0 +1,31 @@
+{
+  "authors": [
+    "ahalls"
+  ],
+  "contributors": [
+    "bhargavg",
+    "davidahouse",
+    "hankturowski",
+    "harquail",
+    "kytrinyx",
+    "lyuha",
+    "masters3d",
+    "nickkjordan",
+    "ThomasHaz",
+    "meatball133"
+  ],
+  "files": {
+    "solution": [
+      "Sources/Allergies/Allergies.swift"
+    ],
+    "test": [
+      "Tests/AllergiesTests/AllergiesTests.swift"
+    ],
+    "example": [
+      ".meta/Sources/Allergies/AllergiesExample.swift"
+    ]
+  },
+  "blurb": "Given a person's allergy score, determine whether or not they're allergic to a given item, and their full list of allergies.",
+  "source": "Exercise by the JumpstartLab team for students at The Turing School of Software and Design.",
+  "source_url": "https://turing.edu"
+}
