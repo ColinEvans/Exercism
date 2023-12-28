@@ -1,6 +1,8 @@
 Exercism Completed Questions
 
 Completed December 2023:
+Minesweeper
+Anagram
 Allergies
 Acronym
 Grains

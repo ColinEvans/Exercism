@@ -3,19 +3,19 @@
 import PackageDescription
 
 let package = Package(
-  name: "Minesweeper",
+  name: "Anagram",
   products: [
     .library(
-      name: "Minesweeper",
-      targets: ["Minesweeper"])
+      name: "Anagram",
+      targets: ["Anagram"])
   ],
   dependencies: [],
   targets: [
     .target(
-      name: "Minesweeper",
+      name: "Anagram",
       dependencies: []),
     .testTarget(
-      name: "MinesweeperTests",
-      dependencies: ["Minesweeper"]),
+      name: "AnagramTests",
+      dependencies: ["Anagram"]),
   ]
 )

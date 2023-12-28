@@ -1,0 +1,24 @@
+{
+  "authors": [],
+  "contributors": [
+    "bhargavg",
+    "harquail",
+    "lyuha",
+    "masters3d",
+    "robtimp",
+    "ThomasHaz",
+    "meatball133"
+  ],
+  "files": {
+    "solution": [
+      "Sources/Minesweeper/Minesweeper.swift"
+    ],
+    "test": [
+      "Tests/MinesweeperTests/MinesweeperTests.swift"
+    ],
+    "example": [
+      ".meta/Sources/Minesweeper/MinesweeperExample.swift"
+    ]
+  },
+  "blurb": "Add the numbers to a minesweeper board."
+}
