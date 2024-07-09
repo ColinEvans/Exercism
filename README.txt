@@ -1,5 +1,10 @@
 Exercism Completed Questions
 
+Completed June 2024:
+Flatten Array
+Reverse a String
+
+
 Completed December 2023:
 Minesweeper
 Anagram
